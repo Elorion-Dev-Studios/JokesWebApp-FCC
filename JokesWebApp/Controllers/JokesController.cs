@@ -70,7 +70,7 @@ namespace JokesWebApp.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,JokeQuestion,JokeAnswer")] Joke joke)
+        public async Task<IActionResult> Create([Bind("Id,JokeQuestion,JokeAnswer,JokeOwner")] Joke joke)
         {
             if (ModelState.IsValid)
             {
